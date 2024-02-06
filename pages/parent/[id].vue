@@ -1,10 +1,9 @@
-<script setup lang="ts">
+<script setup>
 const router = useRouter()
-</script>
 
+</script>
 <template>
     <div>
-      Parent{{ router }}
+      Parent {{ router.currentRoute }}
     </div>
   </template>
-  
