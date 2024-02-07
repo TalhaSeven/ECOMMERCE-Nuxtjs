@@ -17,7 +17,7 @@ const form = ref({
 
 onMounted(async () => {
     console.log(route.params.id);
-    await axios.get(`http://localhost:3050/api/v1/product/${route.params.id}&id=true`).then((res) => {
+    await axios.get(`http://localhost:3050/api/v1/product/${route.params.id}?id=true`).then((res) => {
         console.log(res.data);
         form.value = res.data.row
     }).catch(error => {
@@ -91,7 +91,7 @@ const submit = () => {
                     </div>
                 </div>
                 <button type="submit"
-                    class="py-3 px-5 text-sm font-medium text-center text-white border border-gray-300 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save
+                    class="py-3 px-5 text-sm font-medium text-center dark:text-white text-black border border-gray-300 rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Save
                     Product</button>
             </form>
         </div>
