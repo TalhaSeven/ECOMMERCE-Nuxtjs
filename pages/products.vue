@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import axios from "axios";
-// proje biraz uzadı
+
 const products = ref([]);
-// yakında bitireceğiz
+
 onMounted(async () => {
   await axios
     .get("http://localhost:3050/api/v1/product")
@@ -15,7 +15,7 @@ onMounted(async () => {
           name: k.title,
           href: "/product/" + k.seo,
           imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+            `https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg`,
           imageAlt: k.title,
           price: "$35",
           color: "Black",

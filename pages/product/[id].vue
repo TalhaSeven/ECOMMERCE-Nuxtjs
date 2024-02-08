@@ -1,17 +1,22 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import axios from 'axios';
-const route = useRoute()
-const product = ref({})
-onMounted(async () => {
-    await axios.get(`http://localhost:3050/api/v1/product/${route.params.id}`).then((res) => {
-        console.log(res.data);
-        product.value = res.data.row
-    }).catch(error => {
-    });
-})
-</script>
 
+import { onMounted, ref } from "vue";
+import axios from "axios";
+
+const route = useRoute();
+const product = ref({});
+
+onMounted(async () => {
+  await axios
+    .get(`http://localhost:3050/api/v1/product/${route.params.id}`)
+    .then((res) => {
+      console.log(res.data);
+      product.value = res.data.row;
+    })
+    .catch((error) => {});
+});
+
+</script>
 
 <template>
   <div class="flex flex-col justify-center">

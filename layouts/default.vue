@@ -116,8 +116,8 @@
                 <span class="badge">New</span>
               </a>
             </li>
-            <li><a>Settings</a></li>
-            <li><a href="/auth/sign-in">Logout</a></li>
+            <li><router-link to="">Settings</router-link></li>
+            <li><router-link to="/auth/sign-in">Logout</router-link></li>
           </ul>
         </div>
       </div>
